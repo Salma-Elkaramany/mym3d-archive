@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+
+  <!-- X3dom -->
+  <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="css/all.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Link in some fonts — Not used because we finally installed the fonts
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'> 
+    -->
+
+  <!-- Use a light box to view images in the gallery -->
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+
+  <title>CocaCola 3dapp</title>
+
+</head>
+
+<body id="bodyColor">
+
+  <!-- Logo and navigation bar -->
+  <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <div class="logo">
+        <a class="navbar-brand" href="index.html">
+          <h1>1</h1>
+          <h1>oca</h1>
+          <h2>Cola</h2>
+          <h3>Journey<span>™</span></h3>
+          <p>Refreshing the world, one story at a time</p>
+        </a>
+      </div>
+
+      <!-- Collapsible Navbar Menu Icon -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Link Menu item button to the links class navbar-collapse selector -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto"> <!-- Use mx-auto to align centre, default to left or use mr-auto -->
+          <!-- nothing changed from Lab 5 -->
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <!-- Added navAbout ID, do we use this? -->
+          <li class="nav-item">
+            <a id="navAbout" class="nav-link" href="#" data-toggle="popover" data-trigger="hover"
+              data-placement="bottom" title="About Web 3D Applications"
+              data-content="3D Apps is a final year and postgraduate module ...">About</a>
+          </li>
+
+          <!-- Replace Dropdown from lab 5 with single nav lnk to models -->
+          <li class="nav-item">
+            <a id="navModels" class="nav-link" href="#" data-toggle="popover" data-trigger="hover"
+              data-placement="bottom" title="X3D Models"
+              data-content="There are three X3D models: Coke, Sprite and Pepper">Models</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Start 3D App SPA Contents -->
+  <div class="container-fluid main_contents"> <!-- Start SPA Contents -->
+    <!-- Home page block element -->
+    <div id="home">
+      <div class="row"> <!-- Main_3D Image or Carousel -->
+        <div class="col-sm-12">
+          <div id="main_3d_image">
+            <div id="main_text" class="col-xs-12 col-sm-4">
+
+              <div id="title_home">
+                <h2> Coca Cola Great Britain</h2>
+              </div>
+              <div id="subTitle_home">
+                <h3> Founded by Dr John S Pemberton</h3>
+              </div>
+              <div id="description_home">
+                <p>The Coca Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic
+                  beverage concentrates and syrups, and produces nearly 400 brands.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row of cards on the grid -->
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <a href="assets/images/render_images/coke.jpg" data-fancybox data-caption="My 3D Coke Can Render">
+              <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/coca_cola.jpg"
+                alt="Coca Cola">
+            </a>
+            <div class="card-body">
+              <div id="title_left" class="card-title drinksText">
+                <h2>Coca Cola</h2>
+              </div>
+              <div id="subTitle_left" class="card-subtitle drinksText">
+                <h3>New York Harbour, 1886</h3>
+              </div>
+              <div id="description_left" class="card-text drinksText">
+                <p>It was 1886, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon,
+                  he stirred up a fragrant, caramel-coloured liquid and, when it was done, the mixture was combined with
+                  carbonated water and sampled by customers who all agreed - this new drink was something special!</p>
+              </div>
+              <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola"
+                class="btn btn-primary btn-responsive">Find out more ...</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card">
+            <a href="assets/images/render_images/sprite.jpg" data-fancybox data-caption="My 3D Sprite Bottle Render"
+              class="img-narrow">
+              <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/sprite.jpg" alt="Sprite">
+            </a>
+            <div class="card-body">
+              <div id="title_centre" class="card-title drinksText">
+                <h2>Sprite</h2>
+              </div>
+              <div id="subTitle_centre" class="card-subtitle drinksText">
+                <h3>West Germany, 1959</h3>
+              </div>
+              <div id="description_centre" class="card-text drinksText">
+                <p>First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon
+                  and lime flavoured soft drink and is sold in more than 190 different countries. Sprite Zero, part of
+                  our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or
+                  calories.</p>
+              </div>
+              <a href="http://www.coca-cola.co.uk/drinks/sprite/sprite" class="btn btn-primary btn-responsive">Find out
+                more ...</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card">
+            <a href="assets/images/render_images/pepper.jpg" data-fancybox data-caption="My 3D Pepper Cup Render"
+              class="thumbnail">
+              <img class="card-img-top img-fluid img-thumbnail" src="assets/images/site_images/dr_pepper.jpg"
+                alt="Dr Pepper">
+            </a>
+            <div class="card-body">
+              <div id="title_right" class="card-title drinksText">
+                <h2>Dr Pepper</h2>
+              </div>
+              <div id="subTitle_right" class="card-subtitle drinksText">
+                <h3>Texas, 1885</h3>
+              </div>
+              <div id="description_right" class="card-text drinksText">
+                <p>Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and
+                  it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was
+                  created by Texas pharmacist Charles Alderton in 1885. The distinctive, bold taste of Dr Pepper has
+                  been popular ever since.</p>
+              </div>
+              <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper"
+                class="btn btn-primary btn-responsive">Find out more ...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End home page -->
+
+    <!-- About page block element -->
+    <div id="about">
+      <div class="card-body-about">
+        <h2>About information</h2>
+        <p>This is my Mobile 3D Applications Coca Cola Based 3D App exploiting HTML5, CSS3, X3D (X3DOM), JavaScript
+          (utilising JS APIs like jQuery, and JS frontend framework, e.g. Bootstrap 4 in this case), AJAX for
+          asynchronous update of HTML contents, JSON for data transfer from backend to frontend, PHP to access data from
+          a SQLite database, and all configured in a MVC pattern.</p>
+        <h2> Statement of Originalilty </h2>
+        <p>This assignment is submitted as part requirement for the degree of MSc Advanced Computer Science at the
+          University of Sussex. It is the product of my own labour except where indicated in the accompanying codebase.
+          This assignment may be freely copied and distributed provided the source is acknowledged. I hereby give /
+          withhold permission for a copy of this assignment to be loaned out to students in future years (delete/update
+          as
+          necessary).</p>
+        <h2> Comments and References</h2>
+        <p>
+          <li>Lab tutorials and course materials helped aid massively in the completion of this project sine I am new to
+            pretty much all the technologies used, hence having code to look back at and examining it made things easier
+            when I faced lots of problems!</li>
+          <li>Youtube tutorials for 3D models: <ol><a href="https://www.youtube.com/watch?v=AZOCu0Arg4Q&t=1193s">Coke
+                Can
+                tutorial</a></ol>
+            <ol><a
+                href="https://www.google.com/search?q=3ds+max+dr+pepper+cup+modelling&rlz=1C1CHBF_en-GBGB951GB951&oq=3ds+max+dr+pepper+cup+modelling&aqs=chrome..69i57j69i60.560j0j4&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:5d76d635,vid:FLF8D4cdGtQ">Dr
+                Pepper tutorial</a></ol>
+            <ol> <a href="https://www.youtube.com/@Autodesk3dsMax/videos">Autodesk 3dsMax tutorials</a></ol>
+            <ol><a href="https://www.youtube.com/watch?v=uxq4ZPXRyBI">Sprite bottle modelling</a></ol>
+          </li>
+          <li>Other than that, when errors or issues appeared used StackOverflow, W3Schools, and other helpful sites,
+            generally tried to google either mistakes or concepts to guarantee I understand what is provided!</li>
+          <li>Also, I used all of the provided contents including all links and extra reading pages given on Canvas.
+          </li>
+        </p>
+      </div>
+    </div> <!-- End of page -->
+
+    <!-- Start X3D models and 3D Image Gallery -->
+    <div id="models">
+      <!-- Row to hold two cards to hold 1) the X3D model, and 2) the gallery-->
+      <div class="row">
+        <!-- X3D Models — Place 4 models in here for the assignment -->
+        <div class="col-sm-8">
+          <div class="card text-left">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a id="navCoke" class="nav-link active" href="#">Coke</a>
+                </li>
+                <li class="nav-item">
+                  <a id="navSprite" class="nav-link" href="#">Sprite</a>
+                </li>
+                <li class="nav-item">
+                  <a id="navPepper" class="nav-link" href="#">Pepper</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <!-- Coke X3D model -->
+              <div id="coke">
+                <div id="x3dModelTitle_coke" class="card-title drinksText"></div>
+                <!-- Place the X3D code here -->
+                <div class="model3D">
+                  <x3d>
+                    <scene>
+                      <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();"
+                        url="assets/x3d/coke.x3d"> </inline>
+                    </scene>
+                  </x3d>
+                </div>
+                <div id="x3dCreationMethod_coke" class="card-text drinksText"></div>
+              </div>
+              <!-- Sprite X3D model -->
+              <div id="sprite" style="display:none;">
+                <div id="x3dModelTitle_sprite" class="card-title drinksText"></div>
+                <!-- Place the X3D code here -->
+                <div class="model3D">
+                  <x3d id="model">
+                    <scene>
+                      <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();"
+                        url="assets/x3d/sprite.x3d"> </inline>
+                    </scene>
+                  </x3d>
+                </div>
+                <div id="x3dCreationMethod_sprite" class="card-text drinksText"></div>
+              </div>
+              <!-- Pepper X3D model -->
+              <div id="pepper" style="display:none;">
+                <div id="x3dModelTitle_pepper" class="card-title drinksText"></div>
+                <!-- Place the X3D code here -->
+                <div class="model3D">
+                  <x3d>
+                    <scene>
+                      <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();"
+                        url="assets/x3d/pepper_animation.x3d"> </inline>
+                    </scene>
+                  </x3d>
+                </div>
+                <div id="x3dCreationMethod_pepper" class="card-text drinksText"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D image gallery -->
+        <div class="col-sm-4">
+          <div class="card text-left">
+            <div class="card-header gallery-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Gallery</a>
+                </li>
+            </div>
+            <div class="card-body">
+              <div class="card-title title_gallery drinksText"></div>
+              <div class="gallery" id="gallery"></div>
+              <div class="card-text description_gallery drinksText"></div>
+            </div>
+          </div> <!-- End gallery card -->
+        </div> <!-- End gallery column -->
+      </div> <!-- End row for X3D Model and Gallery -->
+    </div> <!-- End X3D Models and Gallery -->
+
+    <!-- Start the interaction panels -->
+    <div id="interaction" class="row">
+      <!-- Column for the camera view controls -->
+      <div class="col-sm-4">
+        <div class="card text-left">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <!-- Dropdown nav-tab -->
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Cameras</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#" onclick="cameraFront();">Front</a>
+                  <a class="dropdown-item" href="#" onclick="cameraBack();">Back</a>
+                  <a class="dropdown-item" href="#" onclick="cameraLeft();">Left</a>
+                  <a class="dropdown-item" href="#" onclick="cameraRight();">Right</a>
+                  <a class="dropdown-item" href="#" onclick="cameraTop();">Top</a>
+                  <a class="dropdown-item" href="#" onclick="cameraBottom();">Bottom</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-Title x3dCamera_Subtitle drinksText">
+              <h3>Camera Views</h3>
+            </div>
+            <a href="#" class="btn btn-success btn-responsive" onclick="cameraFront();">Default</a>
+            <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBack();">Back</a>
+            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLeft();">Left</a>
+            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraRight();">Right</a>
+            <a href="#" class="btn btn-outline-dark disabled btn-responsive">Off</a>
+            <div class="card-text x3dCameraDescription drinksText">
+              <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera
+                views</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Column for the animation controls -->
+      <div class="col-sm-4">
+        <div class="card text-left">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Animation</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-Title x3dAnimationSubtitle drinksText">
+              <h3>Animation Options</h3>
+            </div>
+            <a href="#" class="btn btn-outline-light btn-responsive" onclick="spin();">RotX</a>
+            <a href="#" class="btn btn-outline-light btn-responsive">RotY</a>
+            <a href="#" class="btn btn-outline-light btn-responsive">RotZ</a>
+            <a href="#" class="btn btn-outline-dark btn-responsive" onclick="stopRotation();">Stop</a>
+            <div class="card-text x3dAnimationDescription drinksText">
+              <p>These buttons select a range of X3D animation options</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Column for the render type and lighting controls -->
+      <div class="col-sm-4">
+        <div class="card text-left">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Render</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Polygon</a>
+                  <a class="dropdown-item" href="#" onclick="wireframe();">Wireframe</a>
+                  <a class="dropdown-item" href="#">Vertex</a>
+                </div>
+              </li>
+              <!-- Dropdown nav-tab -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Lights</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Default</a>
+                  <a class="dropdown-item" href="#">Onmi On/Off</a>
+                  <a class="dropdown-item" href="#">Target On/Off</a>
+                  <a class="dropdown-item" href="#">Headlight On/Off</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="card-Title x3dRendersubtitle drinksText">
+              <h3>Render and Lighting Options</h3>
+            </div>
+            <a href="#" class="btn btn-success btn-responsive">Poly</a>
+            <a href="#" class="btn btn-secondary btn-responsive" onclick="wireframe();">Wire</a>
+            <a href="#" class="btn btn-success btn-responsive" onclick="headlight();">Headlight</a>
+            <a href="#" class="btn btn-outline-dark btn-responsive">Default</a>
+            <div class="card-text x3dRenderDescription drinksText">
+              <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more
+                options</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End the interaction panels -->
+
+    <!-- Row to hold one card to hold the coke descriptive text, etc.-->
+    <div id="cokeDescription" class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="title_coke" class="card-title drinksText">
+              <h2>History of Coca Cola</h2>
+            </div>
+            <div id="subTitle_coke" class="card-subtitle drinksText">
+              <h3>Atlanta Beginnings</h3>
+            </div>
+            <div id="description_coke" class="card-text drinksText">
+              <p>
+                It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred
+                miles away, another great American symbol was about to be unveiled. Like many people who change history,
+                John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a
+                fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs'
+                Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed -
+                this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a
+                glass.
+              </p>
+            </div>
+            <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola" class="btn btn-primary btn-responsive">Visit
+              Coke</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End coke description contents -->
+
+    <!-- Row to hold one card to hold the sprite descriptive text, etc.-->
+    <div id="spriteDescription" class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="title_sprite" class="card-title drinksText">
+              <h2>Sprite — Fanta Klare Zitrone</h2>
+            </div>
+            <div id="subTitle_sprite" class="card-subtitle drinksText">
+              <h3>First introduced in 1961</h3>
+            </div>
+            <div id="description_sprite" class="card-text drinksText">
+              <p>Crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink
+                and is sold in more than 190 different countries. Sprite Zero, part of Coca Cola's no sugar Zero range,
+                offers the delicious lemon lime taste of Sprite without the sugar or calories.
+              </p>
+            </div>
+            <a href="http://www.coca-cola.co.uk/drinks/sprite/sprite" class="btn btn-primary btn-responsive">Visit
+              Sprite</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End sprite description contents -->
+
+    <!-- Row to hold one card to hold the pepper descriptive text, etc.-->
+    <div id="pepperDescription" class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div id="title_pepper" class="card-title drinksText">
+              <h2>Dr Pepper — Liquid Sunshine</h2>
+            </div>
+            <div id="subTitle_pepper" class="card-subtitle drinksText">
+              <h3>23 fruit flavours</h3>
+            </div>
+            <div id="description_pepper" class="card-text drinksText">
+              <p>
+                Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and
+                it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was
+                created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade
+                Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold
+                taste of Dr Pepper has been popular ever since.
+              </p>
+            </div>
+            <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper" class="btn btn-primary btn-responisve">Visit
+              Pepper.</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End pepper description contents -->
+
+  </div> <!-- End 3D App SPA Contents -->
+
+  <!-- 3D App footer -->
+  <nav id="footerColor" class="navbar navbar-expand-sm footer">
+    <div class="container-fluid">
+      <div class="navbar-text float-left copyright">
+        <p><span class="align-baseline">&copy 2023 Mobile Web 3D Applications | <a
+              href="javascript:changeLook()">Restyle</a> | <a href="javascript:changeBack()">Reset</a></span></p>
+      </div>
+      <div class="navbar-text social">
+        <a target="_blank" href="https://github.com/The-Coca-Cola-Company"><i
+            class="fab fa-github-square fa-2x fa-pull-right"></i></a>
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Coca-Cola"><i
+            class="fab fa-google-plus-square fa-2x fa-pull-right"></i></a>
+        <a target="_blank" href="https://twitter.com/CocaCola"><i
+            class="fab fa-twitter-square fa-2x fa-pull-right"></i></a>
+        <a target="_blank" href="https://www.facebook.com/cocacolaGB/?brand_redir=40796308305"><i
+            class="fab fa-facebook-square fa-2x fa-pull-right"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- My 3D App modals -->
+  <!-- Contact modal -->
+  <!-- The Modal -->
+  <div class="modal fade" id="contactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">3D App Contact Details</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Salma Elkaramany, Email: s.elkaramany@sussex.ac.uk</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="scripts/js/jquery-3.4.1.js"></script>
+  <script src="scripts/js/popper.min.js"></script>
+  <!--<script src="js/bootstrap.js"></script>-->
+  <script src="scripts/js/bootstrap-4.4.1.js"></script>
+
+  <!-- Include the x3dom JavaScript -->
+  <script src='scripts/js/x3dom.js'></script>
+
+  <!-- Font Awesome Version 5 -->
+  <!-- <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script> -->
+  <!-- <script src="all.js"></script> -->
+
+  <!-- Custom JavaScript code for your 3d App -->
+  <!-- Also, intialises popovers-->
+  <script src="scripts/js/custom.js" crossorigin="anonymous"></script>
+
+  <!-- JavaScript to swap for SPA and restyle -->
+  <script src="scripts/js/swap_restyle.js"></script>
+
+  <!-- JavaScript and PHP based Gallery generator  -->
+  <script src="scripts/js/gallery_generator.js"></script>
+
+  <!-- JQuery code to get content data from a backend JSON file -->
+  <script src="scripts/js/getJsonData.js"></script>
+
+  <!-- JavaScript model interactions -->
+  <script src="scripts/js/modelInteractions.js"></script>
+
+  <!--fancyBox3 => http://fancyapps.com/fancybox/3/ -->
+  <script src="scripts/js/jquery.fancybox.min.js"></script>
+
+</body>
+
+</html>
